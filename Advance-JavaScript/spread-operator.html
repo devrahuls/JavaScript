@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        /* In Rest, we always gives the value to rest argument as seperately.
+        But, Now ! In Spread-operator we can include an Array as a rest-operator argument.
+
+        Spread Operator - allows us to quickly copy all or part of an existing array or object into another array or object.
+
+        The main difference between rest and spread is that the rest operator puts the rest of some specific user-supplied values into a JavaScript array.
+           But the spread syntax expands iterables into individual elements.
+        
+        */
+
+        function sum(name , course, ...args){ 
+            
+            //Here, '...args' is a rest operator
+
+            document.write(`Hello ${name} of ${course} : `)
+            let sum = 0;
+            for(let i in args){
+                sum += args[i]
+            }
+            document.write(sum + "<br><br>")
+        }
+
+        let arr = [10 , 20 , 30]
+        sum("Rahul" , "Btech" , ...arr)
+
+
+
+
+        //Simple Cloning
+        let arr1 = [20 , 30 , 40]
+
+        let arr2 = arr1
+        arr1.push(50)
+
+        console.log(arr2)
+
+        //Cloning with spread operator
+        let arr3 = [20 , 30 , 40]
+
+        let arr4 = [...arr3]
+        arr3.push(50)
+
+        console.log(arr4) // This will return only [20,30,40]
+        console.log(arr3)  // This will return [20,30,40,50]
+
+
+
+        //Concatination with Spread Operator -----
+
+        //Back Then 💩
+        let arr5 = [10 , 20 , 30]
+        let arr6 = [50 , 60]
+
+        let arr7 = arr5.concat(arr6)
+
+        console.log(arr7)
+
+        //Now with Spread Operator 😎
+        let arr8 = [10 , 20 , 30]
+        let arr9 = [50 , 60]
+
+        let arr10 = [5 , ...arr8 , ...arr9 , 15]
+
+        console.log(arr10)
+
+
+
+        //Objects with Spread Operator 😎
+        let obj1 = {
+            name: "Rahul Saw" ,
+            course: "Btech"
+        }
+
+        let obj2 = {
+            age: 21
+        }
+
+        let obj3 = {...obj1 , ...obj2}
+
+        console.log(obj3)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterators</title>
+</head>
+<body>
+    
+
+    <script>
+        /* We can control the loops or iteration very easily with the help of iterators */
+        let x = ["Apple" , "Orange" , "Grapes" , "Papaya" , "Litchi"]
+
+        let y = x[Symbol.iterator]()
+
+        console.log(y)
+        console.log(y.next()) //It will return- false & the very first value of 'x' array.
+        console.log(y.next()) //It will return- false & the second value of 'x' array.
+        console.log("Hello")          //  SOME
+        console.log("Hello")         //   RANDOM   
+        console.log("Hello")        //    TEXTS
+        y.next() //It will count as a third value of 'x' array.
+        console.log(y.next().value) //It will return the exact 4th value of array 'x'. It returns - Papaya
+        console.log(y.next().done) //It will return the 'done' value of 5th element of x i.e., 'false'.
+        console.log(y.next()) //It will return- true & 'Undefined' because this is the exceeded value of array 'x' or there's is no 6th value of array 'x'
+
+
+        //How to print all the numbers/chars/strings in Iterators using loop concept.
+
+        //In Array
+        let num = [10 , 20 , 30 , 40 , 50]
+
+        let iter = num[Symbol.iterator]()
+
+        let result = iter.next()
+
+        while(!result.done){
+            console.log(result.value)
+            result = iter.next()
+        }
+
+        //In String
+        let str = "Rahul Saw" 
+
+        let iter1 = str[Symbol.iterator]()
+
+        let result1 = iter1.next()
+
+        while(!result1.done){
+            console.log(result1.value)
+            result1 = iter1.next()
+        }
+
+
+        //How to create an Iterator without using .iterator method
+
+        function numIterator(arr){
+            let nextNum = 0;
+            return{
+                next(){
+                    if(nextNum < arr.length){
+                        return{
+                            value: arr[nextNum++],
+                            done: false
+                        }
+                    } else{
+                        return{
+                            done: true
+                        }
+                    }
+                }
+            }
+        }
+
+        let numbers = [10 , 20 , 30]
+        
+        let numm = numIterator(numbers)
+        console.log(numm.next())
+        console.log(numm.next())
+        console.log(numm.next())
+        console.log(numm.next())
+
+    </script>
+</body>
+</html>

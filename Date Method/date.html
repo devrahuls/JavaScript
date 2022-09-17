@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Method</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Date
+        let now0 = new Date();
+
+        document.write(now0 + "<br><br>")
+
+
+        // To Date String
+        let now1 = new Date();
+
+        document.write(now1.toDateString() + "<br><br>")  //to print the date ina concise manner
+
+
+        // Get Date
+        let now2 = new Date()
+        let now2_0 = new Date('Jan 5 2010');
+
+        document.write(now2.getDate() + "<br>") //to get the date 
+        document.write(now2_0.getDate() + "<br><br>") //to get the date 
+
+
+
+        // Get Full Year
+        let now3 = new Date();
+        let now3_0 = new Date('Jan 5 2010');
+
+
+        document.write(now3.getFullYear() + "<br>") //to get the Full Year 
+        document.write(now3_0.getFullYear() + "<br><br>") //to get the Full Year 
+
+
+
+        // Get no of month in a year
+        // 0 => Jan. , 1 => Feb , 2 => March , 3 => April , 4....., 11 => Dec
+        let now4 = new Date();
+        let now4_0 = new Date('Jan 5 2010');
+
+        document.write(now4.getMonth() + "<br>") //to get the number of Month 
+        document.write(now4_0.getMonth() + "<br><br>") //to get the number of Month 
+
+
+        // Get no of day in a week
+        // 0 => Sunday , 1 => Monday , 2 => Tuesday , 3 => Wednesday , 4 => Thursday , 5....., 6 => Saturday
+        let now5 = new Date();
+        let now5_0 = new Date('Jan 5 2010');
+
+
+        document.write(now5.getDay() + "<br>") //to get the number of day in a week
+        document.write(now5_0.getDay() + "<br><br>") //to get the number of day in a week
+
+
+        // Get Hours
+        let now6 = new Date();
+
+        document.write(now6.getHours() + "<br><br>")
+
+
+        // Get Minutes
+        let now7 = new Date();
+
+        document.write(now7.getMinutes() + "<br><br>")
+
+
+
+        // Get Seconds
+        let now8 = new Date();
+
+        document.write(now8.getSeconds() + "<br><br>")
+
+
+
+        // Get MilliSeconds
+        let now9 = new Date();
+
+        document.write(now9.getMilliseconds() + "<br><br>")
+
+
+
+
+        // Get Hours Minutes Seconds and Milliseconds
+        let now10 = new Date('April 9 2001');
+        let now11 = new Date('April 9 2030');
+
+        document.write(now10.getHours()+ " " + now11.getHours() + "<br>")
+        document.write(now10.getMinutes()+ " " + now11.getMinutes() + "<br>")
+        document.write(now10.getSeconds()+ " " + now11.getSeconds() + "<br>")
+        document.write(now10.getMilliseconds()+ " " + now11.getMilliseconds() + "<br><br>")
+
+
+
+
+
+
+
+        //   DATE SET METHOD
+        
+        
+        // Set Date
+        let now12 = new Date();
+
+        now12.setDate(32)
+        document.write(now12 + "<br><br>")
+
+
+
+
+        //Set FullYear
+        let now13 = new Date();
+
+        now13.setFullYear(2023)
+        document.write(now13 + " <br> " + now13.getDay() + "<br><br>")
+
+
+
+        // set Month
+        let now14 = new Date();
+
+        now14.setMonth(9)
+        document.write(now14 + "<br><br>")
+
+
+
+        //set Hours
+        let now15 = new Date();
+
+        now15.setHours(15)
+        document.write(now15 + "<br><br>")
+
+
+
+
+
+        // Actual use in Real Life 
+        let now16 = new Date();
+        
+        document.write(now16.getHours() + " : " + now16.getMinutes() + " : " + now16.getSeconds() + " : " + now16.getMilliseconds() + "<br><br>") 
+
+
+
+    </script>
+</body>
+
+</html>

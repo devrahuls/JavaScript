@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>methods</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        /*Creating object with Literals method*/
+        let person = {
+            fName: 'Rahul',
+            lName: 'Saw',
+            age: 21
+        }
+
+
+        console.log(person);
+        document.write(person.fName + "<br>");
+        document.write(person.fName + " " + person.lName + "<br><br>");
+
+
+        /*Creating object with 'new' Keyword method*/
+        let person1 = new Object();
+        person1.fName = 'Rahul',
+            person1.lName = 'Saw',
+            person1.age = 21
+
+
+        console.log(person1);
+        document.write(person.fName + "<br>");
+        document.write(person1.fName + " " + person1.lName + " " + person1.age + "<br><br>");
+
+
+
+        let person2 = {
+            fName: 'Rahul',
+            lName: 'Saw',
+            age: 21,
+
+            /*Methods in Objects*/
+            salary: function () {
+                return 250000;
+            },
+
+            fullName: function () {
+                return this.fName + this.lName
+            },
+
+            /*Arrays in objects*/
+            favMovies: ['KGF', 'Dhoom', 'Shreshaah'],
+
+            /*Objects in Objects*/
+            living: {
+                'city': 'Phusro',
+                'country': 'India'
+            }
+        }
+
+        console.log(person2)
+        console.log(person2.fName);
+        document.write(person2.salary() + "<br>");
+        document.write(person2.fullName() + "<br>");
+        document.write(person2.favMovies + "<br>");
+        document.write(person2.favMovies[2] + "<br>");
+        document.write(person2.living.city + " " + person2.living.country + "<br>");
+
+    </script>
+</body>
+
+</html>

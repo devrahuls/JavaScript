@@ -1,0 +1,20 @@
+#outer{
+    background-color: antiquewhite;
+    padding-bottom: 7%;
+}
+#inner{
+    background-color: palevioletred;
+    padding: 7%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+#inner > div{
+    background-color: violet;
+    padding: 7%;
+
+}

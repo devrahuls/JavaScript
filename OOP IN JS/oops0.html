@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS-0</title>
+</head>
+<body>
+    <!--
+    OOPS(Object Oriented Programming) - 
+    Its a methodology/style/pattern to write a large bunch of codes in an effecient way.
+
+    *Code more Modular & Reusable
+    *Well Organized code
+    *Easier to debug
+    *Best for medium to large website projects
+
+
+    Class - 
+-->
+    <script>
+
+        class hello{
+
+            message(){   //This will become a method
+                console.log("Hello World")
+            }
+
+            thanks(){
+                console.log("Thank you Sarah")
+            }
+
+        }
+
+        let a = new hello()     //Now the variable 'a' becomes the object
+        a.message()
+        a.thanks()
+
+
+
+        class student{
+
+            //constructor function
+            constructor(name , age){
+                this.studentname = name;
+                this.studentage = age;
+
+                console.log("This is a Constructor Function")
+            }
+
+            //Prototype Functoin
+            hello(){
+                console.log("Hello " + this.studentname)
+            }
+
+            info(){
+                console.log(`The student name is ${this.studentname} and age is ${this.studentage}`)
+            }
+
+            //Static
+            static staticMethod(){
+                console.log("This is a Static Function")
+            }
+        }
+
+        let b = new student("Sarah" , 22) //An Object
+        b.hello()
+        b.info()
+
+        let c = new student("Rahul" , 21) //An another Object
+        c.hello()
+        c.info()
+
+        //c.staticMethod() //We cant call a static method directly with the object
+
+        student.staticMethod() // We have to call a static method with the help of their respective class.
+
+    </script>
+</body>
+</html>

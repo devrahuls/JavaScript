@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="openWindow()">Open a Window</button>
+    <button onclick="moveWindow()">Move a WindowTo</button>
+    <button onclick="moveWindow1()">Move a WindowBy</button>
+
+    <script>
+
+        function openWindow() {
+            my_window = window.open("", "", "width=600px , height=300px , left=100px , top=100px")
+            my_window.document.write("<p>This is a Paragraph</p>")
+        }
+
+        //moveTo - works as an absolute move
+        function moveWindow(){
+            my_window.moveTo(200 , 200)
+            my_window.focus()
+        }
+
+        //moveBy - works as a Relative move
+        function moveWindow1(){
+            my_window.moveBy(200 , 200)
+            my_window.focus()
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings 2</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        /*charAt*/
+        let str = "JavaScript is a good language"
+
+        let a = str.charAt(0)
+        let b = str.charAt(4)
+        let c = str.charAt(400)
+
+
+        document.write(a + "<br>")
+        document.write(b + "<br>")
+        document.write(c + "<br><br>")
+
+
+
+        // charCodeAt
+        let str1 = "Hello Baby"
+
+        let d = str1.charCodeAt(4)
+
+        document.write(d + "<br><br>")
+
+
+
+        // fromCharCode
+        let e = String.fromCharCode(111)
+
+        document.write(e + "<br><br>")
+
+
+
+        // Concat
+        let str2 = "Rahul is a Good boy. "
+        let str3 = "Sarah is a Good girl. "
+        let str4 = "Neha is a bad girl"
+
+        let f = str2.concat(str3)
+        let g = str2.concat(str3, str4)
+
+
+        document.write(f + "<br>")
+        document.write(g + "<br><br>")
+
+
+
+        // Split
+        let str5 = "Rahul is a Good boy"
+
+        let h = str5.split(" ")
+        let i = str5.split("a")
+        let j = str5.split(" ")
+        let myarray = j[1]
+        let k = str5.split("")
+        let l = str5.split(" ", 3)
+        let m = str5.split()
+
+
+
+        document.write(h + "<br>")
+        document.write(i + "<br>")
+        document.write(myarray + "<br>")
+        document.write(k + "<br>")
+        document.write(l + "<br>")
+        document.write(m + "<br><br>")
+
+
+
+
+        // Repeat
+        let str6 = "Rahul is a Good boy "
+
+        let n = str6.repeat() //It will return nothing but a blank.
+        let o = str6.repeat(2)
+        /* let p = str6.repeat(-2) */ //It will throw RangeError
+
+
+        document.write(n + "<br>" + o + "<br><br>")
+
+
+
+        // Slice
+        let str7 = "Hello World"
+
+        let q = str7.slice(1, 7)
+        let r = str7.slice(0)
+        let s = str7.slice(4)
+        let t = str7.slice(-1)
+        let u = str7.slice(-3)
+        let v = str7.slice(3, -2)
+        //let v = str7.slice(-2,-5)  // It returns nothing. 
+        //let v = str7.slice(-2,3)   // It returns nothing.
+
+
+        document.write(q + "<br>")
+        document.write(r + "<br>")
+        document.write(s + "<br>")
+        document.write(t + "<br>")
+        document.write(u + "<br>")
+        document.write(v + "<br><br>")
+
+
+
+        // substr
+        let str8 = "JavaScript is good language"
+
+        let w = str8.substr(3)
+        let x = str8.substr(3, 7)  // means, from 3 index no to after 7 index number
+        let y = str8.substr(-4)
+        
+
+
+        document.write(w + "<br>")
+        document.write(x + "<br>")
+        document.write(y + "<br><br>")
+
+
+
+        // substr
+        let str9 = "JavaScript is good language"
+
+        let z = str9.substring(3)
+        let aa = str9.substring(3, 7)  // means, from 3 index no to up to 7 index number
+        let ab = str9.substring(-4)
+
+
+        document.write(z + "<br>")
+        document.write(aa + "<br>")
+        document.write(ab + "<br><br>")
+
+
+
+        //toString
+        let number = 69;
+
+        let string = number.toString()
+
+        document.write(string + 10 + "<br><br>")
+
+
+
+        // valueOf
+        let text = "Hello World!";
+
+        let result = text.valueOf();
+
+        document.write(result)
+    </script>
+</body>
+
+</html>

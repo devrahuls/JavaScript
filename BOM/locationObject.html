@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript: Location Object</h1>
+
+    <button onclick="reload()">Click to reload this page !</button>
+    <button onclick="assign()">Click to go to Google !</button>
+    <button onclick="replace()" style="margin-top: 2%;">Click to replace the current page with other !</button>
+
+
+    <script>
+        console.log(location)
+        console.log(location.hash)
+        console.log( location.host)
+        console.log(location.hostname)
+        console.log(location.href)
+        console.log(location.origin)
+        console.log(location.pathname)
+        console.log(location.port)
+        console.log(location.protocol)
+
+
+        // METHODS
+
+        //reload - it reloades the current page
+        function reload(){
+            location.reload()
+        }
+
+        //assign - it assigns a URL into current page and opens it
+        function assign(){
+            location.assign("https://www.google.com")
+        }
+
+        //replace - it replaces the current page with the following URL
+        function replace(){
+            location.replace("https://www.google.com")
+        }
+    </script>
+</body>
+</html>

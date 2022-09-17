@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript: History Object</h1>
+
+    <button onclick="backfunction()">Back</button>
+    <button onclick="forwardfunction()">Forward</button>
+    <button onclick="gofunction()">Go Button</button>
+
+    <script>
+        //length - it describes the length of a history pages in a tab.
+        console.log(history.length)
+
+        //back - it lets you to go to the previous page
+        function backfunction() {
+            history.back()
+        }
+
+        //forward - it lets you to go to the forward page
+        function forwardfunction() {
+            history.forward()
+        }
+
+        //back - it lets you to go to the selected page means, if value is (+ => then it goes to the forward page) else (- => then it goes to the backward page)
+        function gofunction() {
+            history.go(+2) // means, go to two times forward page
+            
+        }
+
+    </script>
+</body>
+
+</html>

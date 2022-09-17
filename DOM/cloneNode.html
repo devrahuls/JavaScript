@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list0">
+        <li>Orange</li>
+        <li>Guava</li>
+        <li class="grapes">Grapes
+        <li class="apple">Apple</li>
+        </li>
+        <li>Apple</li>
+    </ul>
+    <ul id="list1">
+        <li>Pears</li>
+        <li>Watermelon</li>
+    </ul>
+
+
+    <br><br>
+
+
+    <div id="outer" class="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, sint.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div id="inner0">
+            <p id="inner1">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p id="yoyo"> </p>
+    </div>
+
+    <script>
+        let target = document.getElementById("list0").children[1]
+        let copyElement = target.cloneNode(true)
+        //cloneNode() is just copy the a list or a tag and then paste it on another section of tag or whatever the fuckin else thinggggggggggg.
+        document.getElementById("list1").appendChild(copyElement)
+
+
+        let parentElement = document.getElementById("outer")
+        let target1 = document.getElementById("inner0")
+        let target2 = document.getElementById("inner")
+
+        let find = parentElement.contains(target1)
+        let find1 = parentElement.contains(target1)
+
+        // contains is a method which return true when an id exists as a child/grand child/great grand child in a parent element tag, otherwise false.
+        console.log(find)
+        console.log(find1)
+
+
+
+
+        console.log("hasAttribute 👇")
+        let target3 = document.getElementById("outer")
+
+        let find2 = target3.hasAttribute("class")
+        //hasAttribute returns true when a selected id or tag have a particular type of attribute, otherwise false.
+          
+        console.log(find2)
+
+
+
+
+        let target4 = document.getElementById("yoyo")
+        let find3 = target4.hasChildNodes()
+        // hasChildNodes returns true when a particular id/class/tag has an atleast one ChildNode(means, some texts, even a single space counts as a Child-Node), otherwise false.
+        console.log(find3)
+    </script>
+</body>
+
+</html>

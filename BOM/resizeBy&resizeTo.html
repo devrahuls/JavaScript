@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="openWindow()">Open a Window</button>
+    <button onclick="resizeWindow()">ResizeTo</button>
+    <button onclick="resizeWindow1()">ResizeBy</button>
+
+    <script>
+        function openWindow() {
+            my_window = window.open("", "", "width=600px , height=300px , left=100px , top=100px")
+            my_window.document.write("<p>This is a Paragraph</p>")
+        }
+
+        //resizeTo - works as an absolute size
+        function resizeWindow() {
+            my_window.resizeTo(200, 200)
+            my_window.focus()
+        }
+
+        //resizeBy - works as a Relative size
+        function resizeWindow1() {
+            my_window.resizeBy(200, 200)
+            my_window.focus()
+        }
+    </script>
+</body>
+
+</html>

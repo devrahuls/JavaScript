@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Orange</li>
+        <li>Potato</li>
+        <li>Grapes</li>
+        <li>Apple</li>
+    </ul>
+
+    <script>
+        let newElement = document.createElement("li")
+        let newText = document.createTextNode("Guava")
+
+        newElement.appendChild(newText)
+
+        let target = document.getElementById("list")
+
+        let oldElement = target.children[1]
+
+        // replaceChild() is used to replace a child within a parent. In this <ul> is parent and <li> is child element
+        target.replaceChild(newElement , oldElement)
+
+
+        let oldElement1 = target.children[3]
+
+        // removeChild() is used to remove a child within a parent. In this <ul> is parent and <li> is child element
+        target.removeChild(oldElement1)
+    </script> 
+</body>
+</html>

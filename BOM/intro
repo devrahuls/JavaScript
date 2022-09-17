@@ -1,0 +1,12 @@
+BOM (Browser Object Model) - 
+
+In JS if we wanna do programming related to browser then its called BOM
+
+Features - 
+
+• Get Width& Height of Browser Window
+• Open & Close Browser Window
+• Move &Resize Browser Window 
+• Scroll to Browser Window
+• Get URL, Hostname, Protocol of Browser Window 
+•Get History of Browser Window

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_47dwpmff.json" background="transparent" speed="1"
+        style="width: 400px; height: 400px;" loop autoplay></lottie-player>
+
+    <script>
+
+        let name = "Rahul", age = 21;
+
+        let obj = {
+            name,   //Here we dont need to add object's variable name
+            age
+        }
+
+        console.log(obj)
+
+
+        //Use Variable as a Property Name
+        let n = "student"
+
+        let obj1 = {
+            [n + "name"]: "Rahul", //We can use variable name as a property name
+            course: "Btech",
+            age: 21,
+            about: function () {
+                return `${this.studentname} is a student of ${this.course} course`
+            },
+
+            // THIS IS NEW FUNCTION SYNTAX
+            'detail show'() {
+                return `${this.studentname} is ${this.age} y/o and a student of ${this.course} course`
+
+            }
+        }
+
+        console.log(obj1)
+        console.log(obj1.course)
+        console.log(obj1.about())
+        console.log(obj1['detail show']())
+
+
+        //New Function Syntax 
+
+        let fname = "Rahul"
+        let lname = "Saw"
+        let course = "Btech"
+
+        function student(fname, lname, course) {
+            let fullname = fname + " " + lname
+            return {fullname, course}
+        }
+
+        let s = student(fname,lname,course)
+        console.log(s.fullname)
+        console.log(s.course)
+
+
+
+    </script>
+</body>
+
+</html>

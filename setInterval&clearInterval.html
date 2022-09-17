@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="test" style="border: 1px solid red; background:red; padding: 5rem; margin:0rem 35rem 2rem 0rem "></div>
+
+    <div id="test1" style="border: 1px solid red; background:red; padding: 5rem; margin:0rem 35rem 2rem 0rem "></div>
+
+    <script>
+        //setInterval - it is used to set an animation at a particular interval of time.
+        //Syntax - setInterval(function-name , milliseconds)
+
+        let a = 0;
+        setInterval(Anim, 999999999)
+
+        function Anim() {
+            a = a + 10
+            let target = document.getElementById("test")
+            target.style.marginLeft = a + 'px';
+        }
+
+
+
+
+        //clearInterval - it is used to clear an animation on a particular interval of time.
+        //Syntax - clearInterval(setInterval-variable-name)
+
+        let b = 0;
+        let c = setInterval(Anim1, 500)
+
+        function Anim1() {
+            b = b + 10
+
+            if (b == 200) {
+                clearInterval(c)
+            }
+            else {
+                let target1 = document.getElementById("test1")
+                target1.style.marginLeft = b + 'px';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constWithArray&Object</title>
+</head>
+<body>
+    <script>
+
+        const a = 20;
+
+        /*a = 10;*/ // We cant update it 
+
+        document.write(a + "<br><br>"); //Simply, in 'const' variable we can't update a variable's value.
+
+
+
+
+        //But with the help of - assigning an array or object to a 'const' variable - we can update a const variable's value.
+
+        // 1. By Array method
+
+        const b = [10 , 20 , 30 , 40];
+
+        b[1] = 25; //updating a const value
+
+        b[2] = 35; //updating a const value
+
+        /*b = [11, 21 , 31 ];*/ //Here, we cant update a const by assigning a new array to it.
+
+        document.write(b + '<br><br>');
+
+
+        // 2. By Object method
+
+        const c = {
+            name : "Rahul",
+            age : 21
+        };
+
+        c.name = "Sarah"
+        c.age = 22
+       
+       /* const c = {
+            name : "Sarah",
+            age : 22
+        }; */                    //Here, we cant update a const by assigning a new object to it.
+
+        document.write(c.name + " " + c.age);
+
+
+    </script>
+</body>
+</html>
+

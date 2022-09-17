@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="openWindow()">Open a Window</button>
+    <button onclick="closeWindow()">Close a Window</button>
+
+    <script>
+
+        function openWindow() {
+            my_window = window.open("https://www.google.com", "", "width=600px , height=300px , left=350px , top=300px")
+        }
+
+        function closeWindow() {
+            my_window.close()
+        }
+
+        /*
+
+            window.open(URL, name, specs)
+            URL - https://www.google.com
+            name - 
+            •first Window 
+                 OR
+            • _blank - It opens as a new tab
+            • _parent - It replaces the current tab and opens in a new tab
+            • _self - It opens a tab as an iframe
+            • _top - It opens a tab as a main frame set
+            
+            Specs - 
+            • Width - It gives the width of a window
+            • Height - It gives the height of a window
+            • Left - It gives the left measure of a window
+            • Top - It gives the top measure of a window
+            
+
+            Close Window => window.open-variable-name.close() - It closes a particular window
+            
+                */
+    </script>
+</body>
+
+</html>

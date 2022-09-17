@@ -1,0 +1,284 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>methods</title>
+</head>
+
+<body>
+
+
+    <h2>JS Array's Methods</h2>
+    <br><br>
+
+    <script>
+        let a = ["Rahul", "Ajay", "Shushmita", 19, 189, 4, 1, 24, 0];
+
+        document.write(a + "<br><br>");
+
+        a.sort();
+
+        document.write(a + "<br><br>");
+
+        a.reverse();
+
+        document.write(a + "<br><br>");
+
+        a.pop();
+
+        document.write(a + "<br><br>");
+
+        a.push("Nasty")
+
+        document.write(a + "<br><br>");
+
+        a.shift();
+
+        document.write(a + "<br><br>");
+
+        a.unshift("Sarah");
+
+        document.write(a + "<br><br>");
+
+
+
+
+        /*Concat*/
+        let b = ["Priya", "Mahima", 30];
+        let c = ["Brazil", "India", 100];
+
+        let d = a.concat(a, b, c);
+
+        document.write(d + "<br><br>");
+
+
+
+        /*Join*/
+        let e = b.join(" / ");
+
+        document.write(e + "<br><br>");
+
+
+
+
+        /*Slice*/
+        let f = ["Hello", "I", "Am", "Mr.", "Robot", 69, 79];
+
+        let g = f.slice(1, 5);
+
+        document.write(g + "<br>");
+
+        let h = f.slice(-6, -2);
+
+        document.write(h + "<br><br>");
+
+
+        /*Splice*/
+        f.splice(3, 0, "Not", "A");
+
+        document.write(f + "<br>");
+
+
+        f.splice(3, 4, "Rahul", "Kumar", "Saw");
+
+        document.write(f + "<br><br>");
+
+
+
+
+        /*isArray*/
+        i = 10;
+        j = "Rahul"
+        let k = Array.isArray(f);
+        let l = Array.isArray(i);
+        let m = Array.isArray(j);
+
+        document.write(k + "<br>");
+        document.write(l + "<br>");
+        document.write(m + "<br><br>");
+
+
+
+
+        /*indexOf*/
+        let n = ["Ajey", "Rahul", "Carry", "Minati", "Rahul"]
+
+        let o = n.indexOf("Rahul");
+        let p = n.indexOf("Rahul", 2);
+        let q = n.indexOf("Hritik");
+        document.write(o + "<br>");
+        document.write(p + "<br>");
+        document.write(q + "<br><br>");
+
+
+
+        /*lastIndexOf*/
+        let r = ["Ajey", "Rahul", "Carry", "Minati", "Rahul"]
+
+        let s = n.lastIndexOf("Rahul");
+        let t = n.lastIndexOf("Rahul", 2);
+        let u = n.lastIndexOf("Hritik");
+        document.write(s + "<br>");
+        document.write(t + "<br>");
+        document.write(u + "<br><br>");
+
+
+
+        /*includes()*/
+
+        let v = r.includes("Rahul", "Carry");
+        document.write(v + "<br><br>");
+
+
+
+        /*some()*/
+        let ages = [10, 15, 18, 20, 25, 17];
+        document.write(ages + "<br>");
+
+        let w = ages.some(checkAdult);
+
+        function checkAdult(age) {
+            return age >= 18;
+        }
+
+        document.write(w + "<br><br>")
+
+
+
+        /*every*/
+        let ages1 = [100, 19, 18, 20, 25, 27];
+        document.write(ages1 + "<br>");
+
+        let x = ages1.every(checkAdult1);
+
+        function checkAdult1(age1) {
+            return age1 >= 18;
+        }
+
+        document.write(x + "<br><br>")
+
+
+
+
+
+        /*find */
+        let ages2 = [10, 17, 18, 20, 25, 27];
+        document.write(ages2 + "<br>");
+
+        let y = ages2.find(checkAdult2);
+
+        function checkAdult2(age2) {
+            return age2 >= 18;
+        }
+
+        document.write(y + "<br><br>")
+
+
+
+
+        /*findIndex */
+        let ages3 = [10, 17, 18, 20, 25, 27];
+        document.write(ages3 + "<br>");
+
+        let z = ages3.findIndex(checkAdult3);
+
+        function checkAdult3(age3) {
+            return age3 >= 18;
+        }
+
+        document.write(z + "<br><br>")
+
+
+
+
+        /*filter */
+        let ages4 = [18, 17, 10, 20, 25, 12];
+        document.write(ages4 + "<br>");
+
+        let aa = ages4.filter(checkAdult4);
+
+        function checkAdult4(age4) {
+            return age4 >= 18;
+        }
+
+        document.write(aa + "<br><br>")
+
+
+
+        /*toString*/
+        let ab = ["Rahul", "Sarah", "Ajey"];
+
+        ab.toString();
+
+        document.write(ab + "<br><br>");
+
+
+
+        /*valueOf*/
+        let ac = ["Rahul", "Sarah", "Ajey"];
+
+        ad = ac.valueOf(ac);
+
+        document.write(ac.valueOf() + "<br><br>");
+
+
+
+
+        /*fill*/
+        let ae = ["Rahul", "Sarah", "Ajey"];
+
+        ae.fill("Ram");
+
+        document.write(ae + "<br><br>");
+
+
+
+
+        /*forEach*/
+        let af = ["Rahul", "Sarah", "Neha"];
+        af.forEach(function (value, index) {
+            document.write(index + " : " + value + "<br>");
+        })
+        document.write("<br><br>")
+
+
+        /*forEach - add all elements with each other*/
+        let sum = 0, numbers = [65, 44, 12, 4];
+
+        numbers.forEach(myfunction)
+
+        function myfunction(value, index) {
+            sum += value;
+        }
+
+        document.write(sum + "<br><br>");
+
+
+        /*forEach - multiply all elements with each other*/
+        let mult = 1;
+        numbers.forEach(myfunction1)
+
+        function myfunction1(value) {
+            mult *= value;
+        }
+
+        document.write(mult + "<br><br>");
+
+
+
+        /*forEach - multiply all elements by 10 seperately*/
+        numbers.forEach(myfunction2)
+
+        function myfunction2(value, index, arr) {
+            arr[index] = value * 10;
+        }
+
+        document.write(numbers);
+
+    </script>
+
+</body>
+
+</html>

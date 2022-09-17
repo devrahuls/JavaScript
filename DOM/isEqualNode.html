@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <ul id="list-1">
+        <li>Orange</li>
+        <li>Potato</li>
+        <li>Grapes</li>
+        <li>Apple</li>
+    </ul>
+
+    <ul id="list-2">
+        <li>Watermelon</li>
+        <li>Orange</li>
+        <li>Papaya</li>
+    </ul>
+
+    <script>
+
+        // isEqualNode returns true if - eg.-> an item of a list matches to an another list. In order to being equal tag should be - 
+        /* 
+        Same Node Type
+        Same nodeName
+        Same NodeValue
+        Same childNodes
+        Same attributes
+        Same attribute values
+        */
+
+
+        let target1 = document.getElementById("list-1").firstElementChild
+        let target2 = document.getElementById("list-2").firstElementChild
+
+        let equal = target1.isEqualNode(target2)
+
+        console.log(equal)
+
+
+
+        let target11 = document.getElementById("list-1").firstElementChild
+        let target22 = document.getElementById("list-2").children[1]
+
+        let equal1 = target11.isEqualNode(target22)
+
+        console.log(equal1)
+    </script>
+</body>
+</html>

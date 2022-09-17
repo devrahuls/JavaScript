@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //While using Strict
+       /* "use strict"
+         a = 10; //This will cause an error because a isnt declared
+        console.log(a) */
+
+
+
+       /* "use strict"
+        let b = 20;
+        console.log(b) */
+
+
+
+       /* myFunction();
+
+        function myFunction(){
+            c = 30; //This will caught an error because c isnt declared
+        } */
+
+
+
+        
+       /* //Declaring Strict inside a function, then it has a local scope(only the code inside the function is in strict mode)
+        d = 40  //This will not cause an error
+        function myFunction1(){
+            "use strict"
+            e = 50; //This will cause an error because e isnt declared
+        }
+
+        myFunction1() */
+
+
+
+
+        //Declaring same parameters will also cause an error in strict mode
+        function myFunction2( p1 , p2 , p2 ){
+            console.log(p1 + p2 + p2)
+        }
+        myFunction2( 10 , 20 , 30 ) //This will throw 70 and doesnt cause any error, but when we write it in a strict mode:
+
+        function myFunction3( p1 , p2 , p2 ){
+            "use strict"
+            console.log(p1 + p2 + p2)
+        }
+        myFunction3( 10 , 20 , 30 ) //This will throw an error because we can't use same parameter name in a function.
+    </script>
+</body>
+</html>

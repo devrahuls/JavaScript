@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isFinite</title>
+</head>
+<body>
+    
+    <script>
+        let num0 = 69;
+
+        let check0 = Number.isFinite(num0)
+
+        document.write(check0 + "<br><br>")
+
+
+
+        let num1 = -100, num2 = -1.25;
+
+        let check1 = Number.isFinite(num1)
+        let check2 = Number.isFinite(num2)
+
+        document.write(check1 + " " + check2 + "<br><br>")
+
+
+
+        let num3 = "Hello";
+
+        let check3 = Number.isFinite(num3)
+
+        document.write(check3 + "<br><br>")
+
+
+
+        let num4 = Infinity;
+
+        let check4 = Number.isFinite(num4)
+
+        document.write(check4 + "<br><br>")
+
+
+
+        let bool0 = false
+
+        let check5 = Number.isFinite(bool0)
+
+        document.write(check5 + "<br><br>")
+    </script>
+</body>
+</html>

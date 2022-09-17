@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators</title>
+</head>
+<body>
+    
+    <script>
+        //With the help of generator we can control the function output values
+        function *generateIt(){
+            console.log("First Message")
+            yield "Yield No 1"
+            console.log("Third Message")
+            yield "Yield No 2"
+            console.log("Fifth Message")
+            yield "Yield No 3"
+            yield "Yield No 4"
+            yield "Yield No 5"
+        }
+
+        let g = generateIt()
+
+        console.log(g.next())
+        console.log(g.next())
+        console.log(g.next())
+        g.next()
+        console.log(g.next())
+
+
+
+
+    
+        function *generateItss(){
+            yield 'PHP'
+            yield 'React'
+            yield 'Node'
+            yield 'Angular'
+        }
+        
+        let gen = generateItss()
+
+        console.log(gen.next())
+        console.log(gen.next())
+        console.log(gen.return('Ending Now')) // .return() means - It stops the next yield values when it calls. Means, Node & Angular won't print.
+        console.log(gen.next())
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //back then 💩
+        function sum(args1 , args2){
+            document.write(args1 + args2 + "<br>")
+        }
+        sum(20 , 30)
+        sum(20 , 30 , 40) //Here we cant add more than two arguments at the same time.
+
+
+        
+
+        //Now 😎
+        function sum1(){
+            console.log(arguments) //It will makes arguments as an object 
+            
+            let sum = 0;
+
+            for(let i in arguments){
+                sum += arguments[i]
+            }
+            document.write(sum + "<br>")
+        }
+        sum1(20,30,40) // It will become as an object with the help of 'arguments'.
+        sum1(20,30,40,50,60) //And now we are able to add more than two arguments at the same time
+
+
+
+
+        //Rest Operator
+
+         /*Rest - It allows us to call a function with any number of arguments and then access those excess arguments as an array
+                    It always applies as a last argument */
+
+        function sum2(name , course, ...args){ 
+            
+            //Here, '...args' is a rest operator
+
+            document.write(`Hello ${name} of ${course} : `)
+            let sum = 0;
+            for(let i in args){
+                sum += args[i]
+            }
+            document.write(sum + "<br>")
+        }
+        sum2("Rahul" , "Btech" , 20 , 30 , 40)
+        sum2("Sarah" , "MBA" , 20 , 30 , 40 , 90)
+
+    </script>
+</body>
+</html>

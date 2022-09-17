@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in</title>
+</head>
+
+<body>
+
+    <script>
+        let obj = {
+
+            fname: "Rahul",
+            lname: "Saw",
+            age: 21,
+            email: "Printfrahulsaw@gmail.com",
+            phn: 7645111111,
+            add: "Phusro",
+            course: "B.Tech.",
+            country: "India"
+
+        };
+
+        // 1. First Method by Printing all properties one by one
+        document.write(obj.fname + obj.lname + obj.age + obj.email + "<br><br>");
+
+
+        //2. Second Method by using 'for in' loop
+
+        for(var key in obj){
+            document.write(key + " : " + obj[key] + "<br>")
+        }
+
+        //The 'key' will stores the name and its value of a property in an object
+
+    </script>
+</body>
+
+</html>

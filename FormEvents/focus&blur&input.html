@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+    onfocus => it activates when someone clicks on it.
+    onblur => it helps to remove the onfocus when click present on somewhere else.
+    oninput => it displays live texts.
+    -->
+    
+    <form action="">
+        <label for="">Name</label> <input type="text" id="fname" onfocus="focusfunction(this)"
+            onblur="blurfunction(this)" oninput="inputfunction(this)"> <br><br>
+
+        <label for="">Class</label> <input type="text" id="" onfocus="focusfunction(this)" onblur="blurfunction(this)">
+        <br><br>
+
+        <label for="">Country</label>
+        <select name="" id="" onfocus="focusfunction(this)" onblur="blurfunction(this)">
+            <option value="">India</option>
+            <option value="">Russia</option>
+            <option value="">Afghanistan</option>
+            <option value="">Japan</option>
+            <option value="">Israel</option>
+        </select>
+    </form>
+
+    <br><br>
+
+    <div id="test" style="border: 2px solid black;"></div>
+
+    <script>
+        function focusfunction(element) {
+            element.style.background = "tomato"
+        }
+        function blurfunction(elements) {
+            elements.style.background = ""
+        }
+
+        function inputfunction(elementss) {
+            let x = elementss.value
+            document.getElementById("test").innerHTML = x
+        }
+    </script>
+</body>
+
+</html>

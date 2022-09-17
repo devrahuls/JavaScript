@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        /*Length*/
+        let str1 = "Hello My Name Is Rahul"
+
+        let a = str1.length
+
+        document.write(a + "<br><br>");
+
+
+        /*toLowerCase*/
+        let str2 = "I WILL BE PRINT IN LOWER CASE"
+
+        let b = str2.toLowerCase()
+
+        document.write(b + "<br><br>");
+
+
+        /*toUpperCase*/
+        let str3 = "i will be print in upper case"
+
+        let c = str3.toUpperCase()
+
+        document.write(c + "<br><br>");
+
+
+        /*includes*/
+        let str4 = "JavaScript is a GREAT language"
+
+        let d = str4.includes("is")
+        let e = str4.includes("GREAT")
+        let f = str4.includes("Great")
+        let g = str4.includes("ipt")
+
+
+        document.write(d + " " + e + " " + f + " " + g + "<br><br>");
+
+
+        /*startsWith*/
+        let str5 = "JavaScript is a GREAT Language"
+
+        let h = str5.startsWith("javascript")
+        let i = str5.startsWith("JavaScript")
+        let j = str5.startsWith("Java")
+        let k = str5.startsWith("Script")
+
+
+        document.write(h + " " + i + " " + j + " " + k + "<br><br>");
+
+
+
+        /*endsWith*/
+        let str6 = "JavaScript is a GREAT Language"
+
+        let l = str6.endsWith("language")
+        let m = str6.endsWith("Language")
+        let n = str6.endsWith("Lang")
+        let o = str6.endsWith("uage")
+
+
+        document.write(l + " " + m + " " + n + " " + o + "<br><br>");
+
+
+        /*search*/
+        let str7 = "JavaScript is a GREAT language"
+
+        let p = str7.search("is")
+        let q = str7.search("GREAT")
+        let r = str7.search("GREat")
+        let s = str7.search("bad")
+
+
+        document.write(p + " " + q + " " + r + " " + s + "<br><br>");
+
+
+
+
+        /*match*/
+        let str8 = "JavaScript 2 is a GREAT is language its number 1"
+
+        let t = str8.match(/is/g)
+        let u = str8.match(/bad/g)
+        let v = str8.match(1)
+        let w = str8.match(/2/g)
+
+
+        document.write(t + " " + u + " " + v + " " + w + "<br><br>");
+
+
+
+
+
+        /*match*/
+        let str9 = "JavaScript is a GREAT is language"
+
+        let x = str9.indexOf("is")
+        let y = str9.indexOf("is", 15)   //Searching string, From the index number
+        let z = str9.indexOf("yooo")
+
+        document.write(x + " " + y + " " + z + "<br><br>");
+
+
+
+        /*match*/
+        let str10 = "JavaScript is a GREAT is language"
+
+        let aa = str10.lastIndexOf("is")
+        let ab = str10.lastIndexOf("is",20)   //Searching string, From the index number
+        let ac = str10.lastIndexOf("yooo")
+
+        document.write(aa + " " + ab + " " + ac + "<br><br>");
+
+
+        
+        /*replace*/
+        let str11 = "JavaScript is wow a Great is wow language"
+
+        let ad = str11.replace("JavaScript","PHP")
+        let ae = str11.replace("is","are") 
+        let af = str11.replace(/wow/g,"dumb")
+
+        document.write(ad + "<br>" + ae + "<br>" + af + "<br><br>");
+
+
+
+        /*trim*/
+        let str12 = "     JavaScript     ";
+
+        let ag = str12.trim()
+
+        alert(str12)
+        alert(ag)
+    </script>
+
+
+    </script>
+    </script>
+</body>
+
+</html>

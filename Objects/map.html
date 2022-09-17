@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    
+    <script>
+
+        //To multiply all the elements of an array by 10
+        let a = [1 , 2 , 3 , 4 , 5];
+
+        let b = a.map(multiply)
+        document.write(b + "<br><br>");
+
+        function multiply (x){
+            return x * 10
+        }
+
+        //To fetch the first name of all person from an object which is written in an array
+
+        let person = [
+        {fname : "Rahul" , lname : "Saw"},
+        {fname : "Sarah" , lname : "Sethia"},
+        {fname : "Neha" , lname : "Sharma"},
+        ]
+
+        let c = person.map(fetch)
+        document.write(c);
+
+        function fetch (y){
+            return y.fname + " " + y.lname
+        }
+    </script>
+</body>
+</html>

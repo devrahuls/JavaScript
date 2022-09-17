@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructing-object</title>
+</head>
+<body>
+    
+    <script>
+        //Back then💩
+        let user0 = {
+            name0 : "Rahul" , 
+            age0 : 21
+        }
+
+        console.log(user0.name0)
+        console.log(user0.age0)
+
+        //Now 😎
+        let user1 = {
+            name1 : 'Sarah' ,
+            age1 : 22
+        }
+
+        let {name1 : studentName , age1 : studentAge } = user1;
+
+        //console.log(name1)
+        //console.log(age1)
+        console.log(studentName)
+        console.log(studentAge)
+
+
+    </script>
+</body>
+</html>

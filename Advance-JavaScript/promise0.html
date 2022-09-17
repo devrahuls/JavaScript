@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+
+    <script>
+        let complete = prompt("Do you love me?? Type- yes/no")
+
+        let prom = new Promise(function(resolve , reject){
+
+           document.write("Fetching reply, please wait...") //Promise Pending stage
+
+           setTimeout( () => {
+            if(complete == "yes"){      //Promise Fulfilment
+                resolve("Thanks😃, I love you too!");
+            }
+            else{                       //Promise Rejection
+                reject("Sad to hear that!😢");
+            }
+           } , 1500)
+
+        })
+
+        /*let onfulfilment = (result) =>{
+            document.write(result)
+        } 
+        let onrejection = (error) =>{
+            document.write(error)
+        }
+
+        prom.then(onfulfilment)
+        prom.catch(onrejection)*/
+
+        // OR
+
+        prom.then(result => {
+            document.write(result)
+        }).catch((error) => {
+            document.write(error)
+        })
+
+
+        
+    </script>
+</body>
+</html>

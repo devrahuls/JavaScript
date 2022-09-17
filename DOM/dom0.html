@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dom1.js">
+    <title>My Page</title>
+</head>
+
+<body>
+
+    <header id="header0" class="abc" style="background-color: red; color:aliceblue;" onclick="xyz()">RAHUL SAW</header>
+
+
+    <nav id="nav0" class="nav1" style="background-color: purple;" onclick="abc()">
+        <a href="#" style="text-decoration:none; color:aliceblue">HOME</a>
+        <a href="#" style="text-decoration:none; color:aliceblue">ABOUT</a>
+        <a href="#" style="text-decoration:none; color:aliceblue">BLOG</a>
+        <a href="#" style="text-decoration:none; color:aliceblue">CONTACT</a>
+    </nav>
+
+
+    <div id="content0" class="content1" style="background-color:antiquewhite ;">
+
+        <div id="sub-heading0" class="sub-heading1" style="font-size: 2rem;">
+            COOONTEENTT
+        </div>
+
+        <div class="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, illum voluptate. Unde accusantium iure
+            asperiores sunt doloribus quas quis saepe vero molestiae nostrum dolore quidem aspernatur perspiciatis, sed,
+            fuga reprehenderit omnis ea. Natus nemo minus adipisci id ab impedit vero voluptatum hic asperiores. Veniam
+            minus quisquam dignissimos unde id laboriosam minima delectus, eius magnam inventore deleniti, molestias
+            laudantium quaerat incidunt consectetur doloribus corporis sequi tempore cupiditate perferendis obcaecati,
+            at
+            dicta. Cumque fuga enim perferendis consectetur aspernatur illo ipsum, odit sed ea harum, reprehenderit amet
+            perspiciatis nobis officiis. Fugit, error architecto?Lorem ipsum dolor sit amet consectetur adipisicing
+            elit.
+            Cumque laudantium ipsum quas doloribus nisi quis, eaque voluptates harum laboriosam est.
+        </div>
+
+        <div class="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem maiores minima quam voluptatem repellendus
+            quasi saepe illum velit consectetur corrupti.
+        </div>
+
+        <br><br>
+
+        <div class="quotesclass" id="quotesid">
+            HONESTY IS THE BEST POLICY
+        </div>
+    </div>
+
+
+    <br>
+
+
+    <div id="outerid" class="outerclass" style="background-color:blue; padding:4px">
+        <h2>OUTER DIV</h2>
+        <div id="innerid" class="innerclass" style="background-color: aquamarine;">
+            <h2>INNER DIV</h2>
+        </div>
+    </div>
+
+
+    <br>
+
+
+    <div class="dialogueboxclass" id="dialogueboxid" style="background-color:chartreuse ; padding: 10px">
+        MOUSE LEAVE ON ME ;) <br>
+        If you click on me then I won't work !
+    </div>
+
+
+    <br>
+
+
+    <footer id="footer0" class="footer1" style="background-color:tomato ; color:aliceblue">
+        <div>@_victorahul_</div>
+    </footer>
+
+
+
+
+
+
+    <script>
+
+        console.log("dom0.html 👇")
+
+        let ele0, ele00, ele1, ele2, ele3, ele4, ele5, ele6, ele7, ele8, ele9;
+
+
+        ele0 = document.all
+        ele00 = document.all[8]
+
+
+        console.log(ele0)  // To fetch the 8th number object in the whole HTML file
+        console.log(ele00)
+
+
+        ele1 = document.head
+
+        console.log(ele1) // To fetch the head of the HTML
+
+
+        ele2 = document.title
+
+        console.log(ele2) // To fetch the title of the HTML
+
+
+        ele3 = document.body
+
+        console.log(ele3) // To fetch the body of the HTML
+
+
+        ele4 = document.links
+        ele44 = document.links[2]
+
+
+        console.log(ele4)  //To get to know about that how many links tag are there in an HTML Page
+        console.log(ele44) //To get to know about that which link is present in the 2nd location
+
+
+
+        ele5 = document.images
+
+        console.log(ele5) // To know about that how many images tags are there in an HTML Page
+
+
+
+        ele6 = document.forms
+
+        console.log(ele6) // To know about that how many forms tags are there in an HTML Page
+
+
+
+        ele7 = document.doctype
+
+        console.log(ele7) //// To know about the document type in a Page
+
+
+
+        ele8 = document.URL
+
+        console.log(ele8) // It returns the URL of the Web Page
+
+
+
+        ele9 = document.domain
+
+        console.log(ele9) // It returns the simple domain name of the Web Page
+
+
+
+        ele10 = document.baseURI
+
+        console.log(ele10) // It returns the full URL (including http, https) of the Web Page
+
+
+
+        ele11 = document.getElementById("header0")
+
+        console.log(ele11)
+
+
+
+        ele12 = document.getElementsByClassName("para")
+
+        console.log(ele12)
+
+
+
+
+        ele13 = document.getElementsByClassName("para")[1]
+
+        console.log(ele13)
+
+
+
+        ele14 = document.getElementsByTagName("nav")
+
+        console.log(ele14)
+
+    </script>
+
+    <script src="get&&set.js"></script>
+
+    <script src="query.js"></script>
+
+    <script src="DOM-CSS.js"></script>
+
+    <script src="addEventListener.js"></script>
+</body>
+
+</html>

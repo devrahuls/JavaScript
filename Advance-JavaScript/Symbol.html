@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol</title>
+</head>
+<body>
+    
+    <script>
+        //A Symbol() is a Primitive Data Type but unlike Number, Boolean, String, Arrays etc. , it stores a uniquely "hidden" value that no other code can access.
+
+        let a = Symbol("Hello");
+        let b = Symbol("Hello")
+
+        console.log(a === b) //Return false cause both a & b has unique values in thier own.
+        console.log(a)
+        document.write(a.toString() + "<br>")   //.toString() method is used to convert a string into a string
+        //alert(a)   //This will catch an error, fix this if you can 😉
+        document.write(a.description) //If we wanna see the inside value of a Symbol
+
+
+
+        //Object using Symbol()
+
+        let rollno = Symbol("Roll No.")
+        let id = Symbol("Id")
+        let age = Symbol("age")
+
+        let stu = {
+            name : "Rahul Saw" ,
+            course : "Btech" , 
+            [rollno.description] : 76,   //description helps to return the value of the symbol
+            [id] : 69,
+        }
+
+        stu[age] = 21 //We can assign an object's Symbol value from outside the Object
+
+
+        console.log(stu)
+        console.log(stu.name)
+        console.log(stu.rollno) //Returns 'Undefined' because variable 'rollno' is a Symbol() and we can't print it like this.
+        console.log(stu[rollno.description]) //Reutrns the Roll no of the stu object.
+        console.log(stu[age]) //And in this case we can print a Symbol value(which is also a key of an object) without using .description.
+
+        for(let key in stu){console.log(key)}
+
+        console.log(JSON.stringify(stu)) //If we want to insert an object value(where some values are Symbol()) to a server, then we use JSON.stringify()
+    </script>
+</body>
+</html>

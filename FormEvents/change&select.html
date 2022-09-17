@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+        onchange => this attribute returns live something(eg a Text)(works only when we leaves the particular tag) 
+        onselect => this event will trigger when the user selects a text in a particular tag
+        onsubmit => this event will trigger when the user clicks on the submit button in a form
+    -->
+
+    <form action="" onsubmit="submitFunction(this)">
+        <label for="">Name</label> <input type="text" id="fname" onchange="changeFunction(this)"> <br><br>
+
+        <label for="">Class</label> <input type="text" id="class" onselect="selectFunction(this)">
+        
+        <br><br>
+
+        <label for="">E-mail</label> <input type="email" required oninvalid="alert('Please enter the correct email address')" >
+
+        <br><br>
+
+        <label for="">Country</label>
+        <select name="" id="" onchange="changeFunction(this)">
+            <option value="India">India</option>
+            <option value="Russia">Russia</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Japan">Japan</option>
+            <option value="Israel">Israel</option>
+        </select>
+
+        <br><br>
+
+        <input type="submit">
+    </form>
+
+    <br><br>
+
+    <div id="test" style="border: 2px solid black;"></div>
+
+    <script>
+        function changeFunction(elements) {
+            let x = elements.value
+            document.getElementById("test").innerHTML = x
+        }
+
+        function selectFunction(){
+            alert("We dont allow to select the text")
+        }
+
+        function submitFunction(){
+            let y = document.getElementById("fname").value
+            alert(y + " successfully submitted this form")
+        }
+    </script>
+</body>
+</html>
